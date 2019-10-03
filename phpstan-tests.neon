@@ -1,0 +1,4 @@
+parameters:
+
+includes:
+	- vendor/phpstan/phpstan-mockery/extension.neon

@@ -1,0 +1,38 @@
+{
+    "name": "ohkannaduh/osquery-php",
+    "authors": [
+        {
+            "name": "OhKannaDuh",
+            "email": "Liammcnair@outlook.com"
+        }
+    ],
+    "require": {
+        "ramsey/collection": "^1.0",
+        "nilportugues/sql-query-builder": "^1.7",
+        "php-di/php-di": "^6.0",
+        "haydenpierce/class-finder": "^0.4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "phpunit/phpunit": "^8.3",
+        "phpstan/phpstan": "^0.11.16",
+        "phpstan/phpstan-mockery": "^0.11.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "OhKannaDuh\\OsQuery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OhKannaDuh\\OsQueryTests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "phpunit --coverage-html /tmp/coverage",
+            "phpstan analyse --level=max --configuration=phpstan-src.neon src",
+            "phpstan analyse --level=max --configuration=phpstan-tests.neon tests"
+        ]
+    }
+}
